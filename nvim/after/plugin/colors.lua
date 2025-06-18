@@ -1,5 +1,5 @@
 function Coloring(color)
-	color = color
+	color = color or "nordic"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
