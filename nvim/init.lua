@@ -1,2 +1,3 @@
-require('j')
-vim.lsp.enable('luals')
+require("config.lazy")
+require("set")
+require("remap")

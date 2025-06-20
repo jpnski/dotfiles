@@ -21,5 +21,9 @@ vim.opt.updatetime = 50
 
 vim.opt.termguicolors = true
 
-vim.g.mapleader = " "
-vim.g.clipboard = unnamed
+vim.opt.clipboard = "unnamedplus"
+
+vim.opt.signcolumn = "yes"
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
