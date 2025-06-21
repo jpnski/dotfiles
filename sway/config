@@ -14,8 +14,7 @@
 
 ### Output configuration
 
-    output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
- 
+    output * bg ~/Wallpapers/fire.jpg fill
     output eDP-1 resolution 1366x768 position 1366,0
 
 ### Idle configuration
@@ -36,7 +35,7 @@
     floating_modifier $mod normal
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway + end Wayland session?' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Moving around:
 
@@ -97,6 +96,7 @@
     bindsym $mod+a focus parent
 
 # Scratchpad:
+
     bindsym $mod+Shift+minus move scratchpad
     bindsym $mod+minus scratchpad show
 
@@ -122,6 +122,9 @@ bindsym $mod+r mode "resize"
 
 # Utilities:
 
+    # Special key to take a screenshot with grim
+    bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy
+
     # Special keys to adjust volume via PulseAudio
     bindsym --locked $mod+F8 exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
     bindsym --locked $mod+F9 exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
@@ -131,10 +134,8 @@ bindsym $mod+r mode "resize"
     bindsym --locked $mod+F6 exec brightnessctl set 5%-
     bindsym --locked $mod+F7 exec brightnessctl set 5%+
 
-    # Special key to take a screenshot with grim
-    bindsym Print exec grim
-
 # Status Bar:
+
 bar {
     position top
     font InconsolataNerdFont Regular 11
@@ -149,9 +150,21 @@ bar {
 }
 
 # Gaps:
-    gaps inner 5
+
+    gaps inner 7
 
 # Window border
-    default_border pixel 3
 
-include /etc/sway/config.d/*
+    default_border pixel 2
+
+# FX
+
+    blur enable
+    blur_xray disable
+    corner_radius 10
+    shadows enable
+    shadow_blur_radius 10
+    #shadow_color
+    #shadow_inactive_color
+
+    include /etc/sway/config.d/*
