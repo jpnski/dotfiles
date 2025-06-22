@@ -9,7 +9,7 @@ return {
 
             configs.setup({
                 ensure_installed = {
-                    'python', 'lua', 'json', 'proto', 'vim', 'vimdoc', 'markdown', 'diff'
+                    'cpp', 'python', 'lua', 'json', 'proto', 'vim', 'vimdoc', 'markdown', 'diff'
                 },
                 auto_install = false,
                 indent = { enable = true },

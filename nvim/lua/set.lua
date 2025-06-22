@@ -15,6 +15,7 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
 vim.opt.scrolloff = 8
 
 vim.opt.updatetime = 50
