@@ -4,19 +4,28 @@ datetime=$(date +'%D  %I:%M %P')
 
 charge_status=$(cat /sys/class/power_supply/BAT0/status)
 charge_percent=$(cat /sys/class/power_supply/BAT0/capacity)
+
 volume_percent=$(amixer get Master | grep "Right:" | cut -f 7 -d " "| sed 's/[][]//g')
 mute_status=$(amixer get Master | grep "Right:" | cut -f 8 -d " "| sed 's/[][]//g')
 
-if [ $mute_status == 'on' ]; then
-    mute_icon=
+if [[ $(iwgetid) ]]; then
+    network=$(iwgetid | cut -f 6 -d " " | sed 's/ESSID:/ /g; s/"/ /g')
+    wifi_icon=󰖩
 else
-    mute_icon=
+    network=" "
+    wifi_icon=󰖪
+fi
+
+if [ $mute_status == 'on' ]; then
+    vol_icon=
+else
+    vol_icon=
 fi
 
 if [ $charge_status == 'Charging' ]; then
-	status_icon=󰂉
+	charge_icon=󰂉
 else
-	status_icon=󰂀
+	charge_icon=󰂀
 fi
 
-echo ' | '$datetime' | ' $mute_icon'  '$volume_percent' | ' $status_icon' '$charge_percent"%  "
+echo $wifi_icon' '$network ' | ' $vol_icon'  '$volume_percent ' | ' $charge_icon' '$charge_percent"%" ' | ' $datetime ' '
