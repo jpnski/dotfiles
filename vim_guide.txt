@@ -1,0 +1,169 @@
+                   
+
+                             Vim Guide
+
+                        (caps matters here!)
+
+
+Recommendation
+    
+    1. Unbind the caps lock key in Ubuntu - messes up your inputs if you
+       accidentally engage it
+
+    2. Unbind the arrow keys - do all navigation with < hjkl > in 
+       vim
+
+---------------------------------------------------------------------
+
+Starting out / Netrw (file viewer)
+
+    Open vim in directory with Netrw        [ nvim . ]
+    Go up a directory in netrw              [ ctrl - ]
+    Search in Netrw                         [ /query ]
+    Return to Netrw after opening file      [ space v ]
+
+---------------------------------------------------------------------
+
+Finding files
+
+    FindFiles feature (file names)          [ space , ff ]
+    LiveGrep feature (contents of files)    [ space , fg ]
+
+---------------------------------------------------------------------
+
+Splits
+
+    Open same file in Horizontal split      [ ctrl w , v ]
+    Open same file in Vertical split        [ ctrl w , s ]
+
+    Open Horizontal split with Netrw        [ space , V ]
+    Open Vertical split with Netrw          [ space , S ]
+
+    Equalize split sizes                    [ ctrl w , = ]
+
+
+Navigate splits (if one of the splits is Netrw, use the ctrl w version)
+
+    Go Left                         [ ctrl w , h ]   or   [ ctrl h ]
+    Go Right                        [ ctrl w , l ]   or   [ ctrl l ]
+    Go Down                         [ ctrl w , j ]   or   [ ctrl j ]
+    Go Up                           [ ctrl w , k ]   or   [ ctrl k ]
+
+
+Terminal in a split
+
+    Start terminal                          [ :term ]
+    Kill terminal                           [ :q ]
+
+    Start typing in terminal                [ i ]
+    Stop typing in terminal                 [ ctrl q ]
+
+---------------------------------------------------------------------
+
+Basic Movement
+
+    Top of file                             [ gg ]
+    Bottom of file                          [ G ]
+
+    Jump half page up                       [ ctrl u ]
+    Jump half page down                     [ ctrl d ]
+    
+    Start of line                           [ 0 ]
+    End of line                             [ $ ]
+
+    Jump forward word-wise                  [ w ]
+    Jump backward word-wise                 [ b ]
+
+    Start typing at end of line             [ shift a ] 
+
+---------------------------------------------------------------------
+
+Basic Edits
+    
+    Copy (yank)                             [ y ]
+    Paste                                   [ p ]
+    Cut                                     [ x ]
+    Delete line                             [ dd ]
+    Undo last edit                          [ u ]
+    Re-do last edit                         [ ctrl r ]
+
+---------------------------------------------------------------------
+
+Visual Edits
+
+    Hint:
+        Try using < hjkl > to modify selection range of these
+
+
+    Uppercase character                     [ ctrl v , U ]
+    Lowercase character                     [ ctrl v , u ]
+
+    Uppercase line                          [ shift v , U ]
+    Lowercase line                          [ shift v , u ]
+
+    Insert before selection                 [ ctrl v , shift i , <input> , esc ]
+
+    Delete selection                        [ctrl or shift , v , d ]
+
+    Bump line up                            [ shift v , K ]
+    Bump line down                          [ shift v , J ]
+
+---------------------------------------------------------------------
+
+Searching Within File
+
+    Hint:
+        Look at bottom right of vim, look for [x/y] indicating
+        "instance x out of y total"
+
+
+    Start search                            [ /query , enter ]
+    Go to next match                        [ n ]
+    Go to previous match                    [ N ]
+    Stop search highlighting                [ esc ]
+
+---------------------------------------------------------------------
+
+Basic Combinations 
+
+    Hint:
+        These either require to navigate to start of word, or to 
+        have cursor inside (parens) or [brackets], for example.
+
+
+    Delete word                             [ dw ]
+    Change word                             [ cw ]
+
+    Visually select inside syntax           [ v , i , <syntax> ]
+    Delete inside syntax                    [ d , i , <syntax> ]
+    Change inside syntax                    [ c , i , <syntax> ]
+
+    Visually select to (next symbol)        [ v , t , <symbol> ]
+    Delete to (next symbol)                 [ d , t , <symbol> ]
+    Change to (next symbol)                 [ c , t , <symbol> ]
+
+---------------------------------------------------------------------
+
+Substitutions
+
+    Hint:
+        These are commands with specific syntax, ran in command
+        mode in vim, but can be super powerful
+
+
+    Global substitution                     [ :%s/<replace/<with>/g ]
+
+    (replaces on all lines)
+
+
+
+    Line range subsitution                  [ :1,5s/<replace>/<with>/g ]
+        
+    (replaces on lines 1 through 5)
+
+
+
+    Relative line subsitution               [ :,+5s/<replace>/<with>/g ]
+
+    (replaces from current line through 5 lines after)
+
