@@ -25,7 +25,7 @@
           before-sleep 'swaylock -f -c 000000'
 
 ### Key bindings
-    
+
     bindsym $mod+Shift+c reload
     bindsym $mod+Return exec $term
     bindsym $mod+i exec $browser
@@ -149,22 +149,19 @@ bar {
     }
 }
 
-# Gaps:
-
-    gaps inner 7
-
-# Window border
-
-    default_border pixel 2
-
-# FX
+# SwayFX:
 
     blur enable
     blur_xray disable
-    corner_radius 10
+    corner_radius 5
     shadows enable
     shadow_blur_radius 10
-    #shadow_color
-    #shadow_inactive_color
+
+# Gaps and Border:
+
+    gaps inner 7
+    default_border pixel 2
+
+# Config Loading:
 
     include /etc/sway/config.d/*
