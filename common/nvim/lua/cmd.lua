@@ -7,3 +7,7 @@ vim.cmd([[highlight MatchParen
 vim.cmd([[highlight Visual
     \ term=reverse ctermfg=230 ctermbg=239
     \ guifg=#faf4c6 guibg=#3c414c guisp=#3c414c]])
+
+vim.cmd([[highlight Normal
+    \ ctermbg=none
+    \ guibg=none]])
