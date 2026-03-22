@@ -16,11 +16,11 @@
         "tray",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
-        "battery"
+        "battery",
+        "power-profiles-daemon"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -68,7 +68,7 @@
         "critical-threshold": 80,
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": [" ", "", " "]
+        "format-icons": ["", "", ""]
     },
     "backlight": {
         "format": "{icon} {percent}%",
@@ -84,7 +84,7 @@
         "format-charging": "  {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-icons": [" ", " ", " ", " ", " "]
+        "format-icons": ["󰂎","󰁻","󰁾","󰂀","󰁹"]
     },
     "battery#bat2": {
         "bat": "BAT2"

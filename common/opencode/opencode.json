@@ -1,0 +1,32 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "autoupdate": "notify",
+    "theme": "one-dark",
+    "compaction": {
+        "auto": true,
+        "prune": true,
+        "reserved": 10000
+    },
+    "permission": {
+        "todoread": "allow",
+        "todowrite": "allow",
+        "question": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "read": {
+            "*": "allow",
+            "*.env": "deny",
+            "*.env.*": "deny"
+        },
+        "lsp": "allow",
+        "bash": "ask",
+        "edit": "ask",
+        "webfetch": "ask",
+        "websearch": "ask",
+        "task": "ask",
+        "skill": "ask",
+        "doom_loop": "deny",
+        "external_directory": "deny"
+    }
+}
