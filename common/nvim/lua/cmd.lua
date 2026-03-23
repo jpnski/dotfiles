@@ -7,3 +7,5 @@ vim.cmd([[highlight MatchParen
 vim.cmd([[highlight Visual
     \ term=reverse ctermfg=230 ctermbg=239
     \ guifg=#faf4c6 guibg=#3c414c guisp=#3c414c]])
+
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#3B4252", fg = "#5E81AC" })
