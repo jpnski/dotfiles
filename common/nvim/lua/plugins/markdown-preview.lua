@@ -9,7 +9,7 @@ return {
       ft = { "markdown" },
       config = function()
         vim.keymap.set("n", "<C-m>", vim.cmd.MarkdownPreviewToggle)
-      end
-      ,
+      end,
+      lazy = false,
     }
 }
