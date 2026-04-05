@@ -5,7 +5,7 @@ return {
             branch = 'master'
             lazy = false
             build = ":TSUpdate"
-            local configs = require("nvim-treesitter.config")
+            local configs = require("nvim-treesitter.configs")
 
             configs.setup({
                 ensure_installed = {
