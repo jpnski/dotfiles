@@ -1,0 +1,75 @@
+
+NeoVim LSP + Autocomplete Stack
+
+This documents the current configuration for reference when maintaining or 
+migrating the setup.
+
+
+Architecture:
+    ┌─────────────┐     ┌───────────────┐    ┌─────────────┐
+    │   Neovim    │────▶│ nvim-lspconfig│───▶│  Pyright    │
+    │ (built-in)  │     │ (plugin)      │    │ (installed) │
+    └─────────────┘     └───────────────┘    └─────────────┘
+         │                                             │
+         │                ┌─────────────┐              │
+         └───────────────▶│  nvim-cmp   │◀─────────────┘
+                          │ (plugin)    │
+         ┌──────────────┐ └─────────────┘  ┌─────────────┐
+         │ cmp-nvim-lsp │◀────────────────▶│ cmp-buffer  │
+         │ (LSP source) │                  │ (fallback)  │
+         └──────────────┘                  └─────────────┘
+
+
+Plugin Stack (in lua/config/lazy.lua):
+    - neovim/nvim-lspconfig  - LSP server configs
+    - hrsh7th/nvim-cmp       - Completion engine
+    - hrsh7th/cmp-nvim-lsp   - LSP completion source
+    - hrsh7th/cmp-buffer     - Buffer text source
+    - hrsh7th/cmp-path       - Path completion source
+    - L3MON4D3/LuaSnip       - Snippet engine
+    - saadparwaiz1/cmp_luasnip - Snippet source
+
+
+Configuration Files:
+    lua/config/lsp.lua   - LSP setup (pyright config, diagnostics, keymaps)
+    lua/config/cmp.lua   - Autocomplete setup (sources, keybindings)
+
+
+Adding New Language Servers:
+    1. Install the LSP binary (npm, pip, apt, etc.)
+    2. Add vim.lsp.enable("servername") in lsp.lua
+    3. Add vim.lsp.config("servername", {...}) with on_attach
+
+    Example for TypeScript (requires npm install -g typescript-language-server):
+        vim.lsp.enable("ts_ls")
+        vim.lsp.config("ts_ls", {
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+
+    Example for Rust (requires rust-analyzer via apt/cargo):
+        vim.lsp.enable("rust_analyzer")
+        vim.lsp.config("rust_analyzer", {
+          on_attach = on_attach,
+          capabilities = capabilities,
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = { allFeatures = true },
+            },
+          },
+        })
+
+
+Type Checking Modes (pyright):
+    off      - No type checking
+    basic    - Minimal checks
+    standard - Moderate checks (default)
+    strict   - Full strict checking
+
+
+Migration Notes:
+    - Neovim 0.11+ uses vim.lsp.config() instead of lspconfig
+    - LSP functions use vim.lsp.buf.* namespace
+    - Diagnostic signs defined via vim.diagnostic.config()
+    - Completion via nvim-cmp (not built-invim.ui.completion)
+

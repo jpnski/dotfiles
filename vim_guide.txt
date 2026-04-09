@@ -167,3 +167,26 @@ Substitutions
 
     (replaces from current line through 5 lines after)
 
+---------------------------------------------------------------------
+
+LSP (Language Server Protocol) - Python / Pyright
+
+    Go to definition                      [ Space gd ]
+    Find references                       [ Space gr ]
+    Go to declaration                     [ Space gD ]
+    Go to implementation                  [ Space gi ]
+    Hover (show type info)                [ Space K ]
+    Code actions                          [ Space ca ]
+    Rename symbol                         [ Space rn ]
+    Format code                           [ Space f ]
+
+---------------------------------------------------------------------
+
+Autocomplete (nvim-cmp)
+
+    Cycle through completions             [ Tab ]
+    Go back in completions                [ Shift Tab ]
+    Accept completion                     [ Enter ]
+    Cancel completion                     [ Ctrl e ]
+
+---------------------------------------------------------------------
