@@ -1,15 +1,14 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
+        branch = 'master',
+        lazy = false,
         config = function()
-            branch = 'master'
-            lazy = false
-            build = ":TSUpdate"
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
                 ensure_installed = {
-                    'cpp', 'python', 'lua', 'json', 'proto', 'vim', 'vimdoc', 'markdown', 'diff'
+                    'cpp', 'python','json', 'proto', 'diff'
                 },
                 auto_install = false,
                 indent = { enable = true },
