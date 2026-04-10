@@ -1,4 +1,4 @@
-                   
+
 
                              Vim Guide
 
@@ -92,7 +92,8 @@ Basic Edits
 Visual Edits
 
     Hint:
-        Try using < hjkl > to modify selection range of these
+        Try using < hjkl > to modify selection range of these after
+        after entering visual mode
 
 
     Uppercase character                     [ ctrl v , U ]
@@ -153,23 +154,21 @@ Substitutions
 
     Global substitution                     [ :%s/<replace/<with>/g ]
 
-    (replaces on all lines)
-
+                                              (replaces on all lines)
 
 
     Line range subsitution                  [ :1,5s/<replace>/<with>/g ]
         
-    (replaces on lines 1 through 5)
-
+                                         (replaces on lines 1 through 5)
 
 
     Relative line subsitution               [ :,+5s/<replace>/<with>/g ]
 
-    (replaces from current line through 5 lines after)
+                      (replaces from current line through 5 lines after)
 
 ---------------------------------------------------------------------
 
-LSP (Language Server Protocol) - Python / Pyright
+LSP - Python / Pyright
 
     Go to definition                      [ Space gd ]
     Find references                       [ Space gr ]
