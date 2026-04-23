@@ -33,3 +33,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("x", "<leader>p", "\"_dP")
+
+-- Trim whitespace
+vim.keymap.set('n', '<leader>t', ':%s/\\s\\+$//e<CR>')
+vim.keymap.set('v', '<leader>t', ':s/\\s\\+$//e<CR>')
