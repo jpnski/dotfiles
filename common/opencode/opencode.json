@@ -1,33 +1,51 @@
 {
-    "$schema": "https://opencode.ai/config.json",
-    "autoupdate": "notify",
-    "theme": "one-dark",
-    "default_agent": "plan",
-    "compaction": {
-        "auto": true,
-        "prune": true,
-        "reserved": 10000
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (Local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {}
     },
-    "permission": {
-        "todoread": "allow",
-        "todowrite": "allow",
-        "question": "allow",
-        "glob": "allow",
-        "grep": "allow",
-        "list": "allow",
-        "read": {
-            "*": "allow",
-            "*.env": "deny",
-            "*.env.*": "deny"
-        },
-        "lsp": "allow",
-        "bash": "ask",
-        "edit": "ask",
-        "webfetch": "ask",
-        "websearch": "ask",
-        "task": "ask",
-        "skill": "ask",
-        "doom_loop": "deny",
-        "external_directory": "deny"
+    "fastflowlm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "FastFlowLM (Local)",
+      "options": {
+        "baseURL": "http://localhost:52625/v1",
+        "api_key": "flm"
+      },
+      "models": {}
     }
+  },
+  "autoupdate": "notify",
+  "default_agent": "plan",
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 10000
+  },
+  "permission": {
+    "todoread": "allow",
+    "todowrite": "allow",
+    "question": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny"
+    },
+    "bash": "ask",
+    "lsp": "allow",
+    "edit": "ask",
+    "websearch": "allow",
+    "webfetch": "ask",
+    "task": "ask",
+    "skill": "ask",
+    "doom_loop": "deny",
+    "external_directory": "ask"
+  }
 }
