@@ -19,6 +19,7 @@
       "models": {}
     }
   },
+  "plugin": ["file:///home/{user}/.config/opencode/plugins/notify-bell.js"],
   "autoupdate": "notify",
   "default_agent": "plan",
   "compaction": {
