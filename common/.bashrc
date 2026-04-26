@@ -72,11 +72,4 @@ else
     start_ssh_agent;
 fi
 
-######################## Misc. ########################
-
-# Foot resize/scrollback reflow fix
-if [[ "$TERM" == foot* ]]; then
-    alias clear='printf "\n%.0s" {1..$LINES}; tput clear'
-fi
-
 ######################## Path ########################
