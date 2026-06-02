@@ -6,14 +6,13 @@
 
 
 Recommendation
-    
-    1. Unbind the caps lock key in Ubuntu - messes up your inputs if you
-       accidentally engage it
 
-    2. Unbind the arrow keys - do all navigation with < hjkl > in 
-       vim
+    1. Unbind the caps lock key - messes up your inputs if you accidentally
+       engage it
 
----------------------------------------------------------------------
+    2. Unbind the arrow keys - do all navigation with < hjkl > in vim
+
+-------------------------------------------------------------------------------
 
 Starting out / Netrw (file viewer)
 
@@ -22,7 +21,7 @@ Starting out / Netrw (file viewer)
     Search in Netrw                         [ /query ]
     Return to Netrw after opening file      [ space v ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Finding files
 
@@ -31,7 +30,7 @@ Finding files
     List open buffers                       [ space , fb ]
     Search help tags                        [ space , fh ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Splits
 
@@ -46,10 +45,10 @@ Splits
 
 Navigate splits (if one of the splits is Netrw, use the ctrl w version)
 
-    Go Left                         [ ctrl w , h ]   or   [ ctrl h ]
-    Go Right                        [ ctrl w , l ]   or   [ ctrl l ]
-    Go Down                         [ ctrl w , j ]   or   [ ctrl j ]
-    Go Up                           [ ctrl w , k ]   or   [ ctrl k ]
+    Go Left                                 [ ctrl w , h ]   or   [ ctrl h ]
+    Go Right                                [ ctrl w , l ]   or   [ ctrl l ]
+    Go Down                                 [ ctrl w , j ]   or   [ ctrl j ]
+    Go Up                                   [ ctrl w , k ]   or   [ ctrl k ]
 
 
 Terminal in a split
@@ -60,7 +59,7 @@ Terminal in a split
     Start typing in terminal                [ i ]
     Stop typing in terminal                 [ ctrl q ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Basic Movement
 
@@ -69,19 +68,19 @@ Basic Movement
 
     Jump half page up                       [ ctrl u ]
     Jump half page down                     [ ctrl d ]
-    
+
     Start of line                           [ 0 ]
     End of line                             [ $ ]
 
     Jump forward word-wise                  [ w ]
     Jump backward word-wise                 [ b ]
 
-    Start typing at end of line             [ shift a ] 
+    Start typing at end of line             [ shift a ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Basic Edits
-    
+
     Copy (yank)                             [ y ]
     Paste                                   [ p ]
     Cut                                     [ x ]
@@ -89,7 +88,7 @@ Basic Edits
     Undo last edit                          [ u ]
     Re-do last edit                         [ ctrl r ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Visual Edits
 
@@ -111,7 +110,7 @@ Visual Edits
     Bump line up                            [ shift v , K ]
     Bump line down                          [ shift v , J ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Searching Within File
 
@@ -125,12 +124,12 @@ Searching Within File
     Go to previous match                    [ N ]
     Stop search highlighting                [ esc ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
-Basic Combinations 
+Basic Combinations
 
     Hint:
-        These either require to navigate to start of word, or to 
+        These either require to navigate to start of word, or to
         have cursor inside (parens) or [brackets], for example.
 
 
@@ -145,7 +144,7 @@ Basic Combinations
     Delete to (next symbol)                 [ dt , <symbol> ]
     Change to (next symbol)                 [ ct , <symbol> ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Other Custom Keymaps
 
@@ -154,7 +153,7 @@ Other Custom Keymaps
     Trim trailing whitespace                [ space , t ]
     (normal or visual)
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Substitutions
 
@@ -169,7 +168,7 @@ Substitutions
 
 
     Line range subsitution                  [ :1,5s/<replace>/<with>/g ]
-        
+
                                          (replaces on lines 1 through 5)
 
 
@@ -177,7 +176,7 @@ Substitutions
 
                       (replaces from current line through 5 lines after)
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 LSP - Python / Pyright
 
@@ -190,7 +189,7 @@ LSP - Python / Pyright
     Rename symbol                         [ Space , rn ]
     Format code                           [ Space , f ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Plugin: nvim-cmp (autocomplete)
 
@@ -199,7 +198,7 @@ Plugin: nvim-cmp (autocomplete)
     Accept completion                      [ Enter ]
     Cancel completion                      [ Ctrl e ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Plugin: markdown-preview
 
@@ -208,7 +207,7 @@ Plugin: markdown-preview
 
     Toggle markdown preview                 [ Ctrl m ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Plugin: vim-signify
 
@@ -219,7 +218,7 @@ Plugin: vim-signify
     Jump to next hunk                       [ ]c ]
     Jump to previous hunk                   [ [c ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Plugin: nvim-surround
 
@@ -229,7 +228,7 @@ Plugin: nvim-surround
 
    Wrap inner string with "("               [ ysiw) ]
    Wrap inner string with "( "              [ ysiw( ]
-    
+
    Wrap outer string with "("               [ ysiW) ]
    Wrap outer string with "( "              [ ysiW( ]
 
@@ -238,16 +237,16 @@ Plugin: nvim-surround
 
    Delete ")" around string                 [ ds) ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Plugin: wrapping-nvim
 
     Note:
         Hard wrap mode: sets 80 char limit at which a \n will be inserted
-        Soft wrap mode: breaks lines at window edge with a break indent symbol
+        Soft wrap mode: breaks lines at window edge with a line break symbol
 
     Hard wrap mode                          [ Space , wh ]
     Soft wrap mode                          [ Space , ws ]
     Toggle wrapping mode                    [ Space , wt ]
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
