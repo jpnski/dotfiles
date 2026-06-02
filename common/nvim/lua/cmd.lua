@@ -29,5 +29,5 @@ vim.cmd([[highlight Search
     \ guifg=#d0ffc0 guibg=#3B4252]])
 
 ---- Borders for Transparent Floats
--- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#3B4252", fg = "#5E81AC" })
--- vim.api.nvim_set_hl(0, "LazyBorder", { bg = "#3B4252", fg = "#5E81AC" })
+--vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#3B4252", fg = "#5E81AC" })
+--vim.api.nvim_set_hl(0, "LazyBorder", { bg = "#3B4252", fg = "#5E81AC" })

@@ -32,3 +32,14 @@ vim.opt.splitbelow = true
 -- Misc.
 vim.opt.updatetime = 50
 vim.opt.clipboard = "unnamedplus"
+
+-- Wrapping / Line Breaks
+vim.opt.breakindent = true
+vim.opt.showbreak = "↳ "
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.bo.textwidth = 80
+    end,
+})

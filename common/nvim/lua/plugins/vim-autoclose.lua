@@ -1,5 +1,5 @@
 return {
     {
-        'Townk/vim-autoclose',
+        "Townk/vim-autoclose",
     }
 }
