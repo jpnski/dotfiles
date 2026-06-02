@@ -28,6 +28,8 @@ Finding files
 
     FindFiles feature (file names)          [ space , ff ]
     LiveGrep feature (contents of files)    [ space , fg ]
+    List open buffers                       [ space , fb ]
+    Search help tags                        [ space , fh ]
 
 ---------------------------------------------------------------------
 
@@ -135,13 +137,22 @@ Basic Combinations
     Delete word                             [ dw ]
     Change word                             [ cw ]
 
-    Visually select inside syntax           [ v , i , <syntax> ]
-    Delete inside syntax                    [ d , i , <syntax> ]
-    Change inside syntax                    [ c , i , <syntax> ]
+    Visually select inside syntax           [ vi , <syntax> ]
+    Delete inside syntax                    [ di , <syntax> ]
+    Change inside syntax                    [ ci , <syntax> ]
 
-    Visually select to (next symbol)        [ v , t , <symbol> ]
-    Delete to (next symbol)                 [ d , t , <symbol> ]
-    Change to (next symbol)                 [ c , t , <symbol> ]
+    Visually select to (next symbol)        [ vt , <symbol> ]
+    Delete to (next symbol)                 [ dt , <symbol> ]
+    Change to (next symbol)                 [ ct , <symbol> ]
+
+---------------------------------------------------------------------
+
+Other Custom Keymaps
+
+    Escape insert mode                      [ jj ]
+    Paste without overwriting yank          [ space , p ]
+    Trim trailing whitespace                [ space , t ]
+    (normal or visual)
 
 ---------------------------------------------------------------------
 
@@ -170,22 +181,73 @@ Substitutions
 
 LSP - Python / Pyright
 
-    Go to definition                      [ Space gd ]
-    Find references                       [ Space gr ]
-    Go to declaration                     [ Space gD ]
-    Go to implementation                  [ Space gi ]
-    Hover (show type info)                [ Space K ]
-    Code actions                          [ Space ca ]
-    Rename symbol                         [ Space rn ]
-    Format code                           [ Space f ]
+    Go to definition                      [ Space , gd ]
+    Find references                       [ Space , gr ]
+    Go to declaration                     [ Space , gD ]
+    Go to implementation                  [ Space , gi ]
+    Hover (show type info)                [ Space , K ]
+    Code actions                          [ Space , ca ]
+    Rename symbol                         [ Space , rn ]
+    Format code                           [ Space , f ]
 
 ---------------------------------------------------------------------
 
-Autocomplete (nvim-cmp)
+Plugin: nvim-cmp (autocomplete)
 
-    Cycle through completions             [ Tab ]
-    Go back in completions                [ Shift Tab ]
-    Accept completion                     [ Enter ]
-    Cancel completion                     [ Ctrl e ]
+    Cycle through completions              [ Tab ]
+    Go back in completions                 [ Shift Tab ]
+    Accept completion                      [ Enter ]
+    Cancel completion                      [ Ctrl e ]
+
+---------------------------------------------------------------------
+
+Plugin: markdown-preview
+
+    Note:
+        Opens a live preview of the markdown file in your browser.
+
+    Toggle markdown preview                 [ Ctrl m ]
+
+---------------------------------------------------------------------
+
+Plugin: vim-signify
+
+    Note:
+        Shows git diff markers in the gutter. The plugin adds
+        default keymaps for navigating hunks.
+
+    Jump to next hunk                       [ ]c ]
+    Jump to previous hunk                   [ [c ]
+
+---------------------------------------------------------------------
+
+Plugin: nvim-surround
+
+    Note:
+        ")" character can be replaced with others like: ], }, " etc
+        For most of these, cursor has to be positioned within the thing to wrap
+
+   Wrap inner string with "("               [ ysiw) ]
+   Wrap inner string with "( "              [ ysiw( ]
+    
+   Wrap outer string with "("               [ ysiW) ]
+   Wrap outer string with "( "              [ ysiW( ]
+
+   Change quotes around string              [ cs'" ]
+   from ' -> "
+
+   Delete ")" around string                 [ ds) ]
+
+---------------------------------------------------------------------
+
+Plugin: wrapping-nvim
+
+    Note:
+        Hard wrap mode: sets 80 char limit at which a \n will be inserted
+        Soft wrap mode: breaks lines at window edge with a break indent symbol
+
+    Hard wrap mode                          [ Space , wh ]
+    Soft wrap mode                          [ Space , ws ]
+    Toggle wrapping mode                    [ Space , wt ]
 
 ---------------------------------------------------------------------
