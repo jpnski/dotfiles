@@ -1,5 +1,7 @@
 ######################## Custom Aliases ########################
 
+alias update='sudo dnf upgrade --refresh'
+
 alias vim='nvim'
 alias sv='source venv/bin/activate'
 alias de='deactivate'
@@ -13,3 +15,9 @@ alias tree='tree -L 2'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+
+alias tls='tmux ls'
+alias ta='tmux a -t'
+alias tks='tmux kill-session -t'
+
+######################## Scripts ########################

@@ -73,3 +73,12 @@ else
 fi
 
 ######################## Path ########################
+
+# Opencode
+export PATH=$HOME/.opencode/bin:$PATH
+
+# Nvim from source
+export PATH=$HOME/devel/neovim/build/bin:$PATH
+
+# xrt-smi
+source /opt/xilinx/xrt/setup.sh > /dev/null
