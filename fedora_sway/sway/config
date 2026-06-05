@@ -106,12 +106,13 @@ exec swayidle -w \
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
-    bindsym $mod+w layout tabbed
+    #bindsym $mod+s layout stacking             # stacking layout unbound
+    #bindsym $mod+w layout tabbed               # tabbed layout unbound
     bindsym $mod+e layout toggle split
 
     bindsym $mod+f fullscreen
-
     bindsym $mod+Shift+f floating toggle
+
     bindsym $mod+space focus mode_toggle
     bindsym $mod+a focus parent
 
@@ -138,14 +139,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Window Overrides
-
-    for_window [app_id="swaycap"] floating enable, resize set 200 300, move position 1660 0
-
-    for_window [app_id="thunar"] floating enable, resize set 1200 800, move position center
-
-    for_window [app_id="imv"] floating enable, resize set 1200 800, move position center
-
 # SwayFX
 
     blur enable
@@ -162,3 +155,16 @@ bindsym $mod+r mode "resize"
 # Config Loading
 
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+
+# Window Overrides
+    for_window [app_id="swaycap"] floating enable, resize set 246 300, move position 1655 5
+
+    for_window [app_id="blueman-manager"] floating enable, resize set 574 300, move position 1327 310
+
+    for_window [app_id="pavucontrol"] floating enable, resize set 574 300, move position 1327 615
+
+    for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 574 300, move position 1327 615
+
+    for_window [app_id="thunar"] floating enable, resize set 1200 800, move position center
+
+    for_window [app_id="imv"] floating enable, resize set 1200 800, move position center
