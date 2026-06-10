@@ -17,38 +17,38 @@ Recommendation
 Starting out / Netrw (file viewer)
 
     Open vim in directory with Netrw        [ nvim . ]
-    Go up a directory in netrw              [ ctrl - ]
+    Go up a directory in netrw              [ Ctrl - ]
     Search in Netrw                         [ /query ]
-    Return to Netrw after opening file      [ space v ]
+    Return to Netrw after opening file      [ Space v ]
 
 -------------------------------------------------------------------------------
 
 Finding files
 
-    FindFiles feature (file names)          [ space , ff ]
-    LiveGrep feature (contents of files)    [ space , fg ]
-    List open buffers                       [ space , fb ]
-    Search help tags                        [ space , fh ]
+    FindFiles feature (file names)          [ Space , ff ]
+    LiveGrep feature (contents of files)    [ Space , fg ]
+    List open buffers                       [ Space , fb ]
+    Search help tags                        [ Space , fh ]
 
 -------------------------------------------------------------------------------
 
 Splits
 
-    Open same file in Horizontal split      [ ctrl w , v ]
-    Open same file in Vertical split        [ ctrl w , s ]
+    Open same file in Horizontal split      [ Ctrl w , v ]
+    Open same file in Vertical split        [ Ctrl w , s ]
 
-    Open Horizontal split with Netrw        [ space , V ]
-    Open Vertical split with Netrw          [ space , S ]
+    Open Horizontal split with Netrw        [ Space , V ]
+    Open Vertical split with Netrw          [ Space , S ]
 
-    Equalize split sizes                    [ ctrl w , = ]
+    Equalize split sizes                    [ Ctrl w , = ]
 
 
 Navigate splits (if one of the splits is Netrw, use the ctrl w version)
 
-    Go Left                                 [ ctrl w , h ]   or   [ ctrl h ]
-    Go Right                                [ ctrl w , l ]   or   [ ctrl l ]
-    Go Down                                 [ ctrl w , j ]   or   [ ctrl j ]
-    Go Up                                   [ ctrl w , k ]   or   [ ctrl k ]
+    Go Left                                 [ Ctrl w , h ]   or   [ Ctrl h ]
+    Go Right                                [ Ctrl w , l ]   or   [ Ctrl l ]
+    Go Down                                 [ Ctrl w , j ]   or   [ Ctrl j ]
+    Go Up                                   [ Ctrl w , k ]   or   [ Ctrl k ]
 
 
 Terminal in a split
@@ -57,7 +57,7 @@ Terminal in a split
     Kill terminal                           [ :q ]
 
     Start typing in terminal                [ i ]
-    Stop typing in terminal                 [ ctrl q ]
+    Stop typing in terminal                 [ Ctrl q ]
 
 -------------------------------------------------------------------------------
 
@@ -66,8 +66,8 @@ Basic Movement
     Top of file                             [ gg ]
     Bottom of file                          [ G ]
 
-    Jump half page up                       [ ctrl u ]
-    Jump half page down                     [ ctrl d ]
+    Jump half page up                       [ Ctrl u ]
+    Jump half page down                     [ Ctrl d ]
 
     Start of line                           [ 0 ]
     End of line                             [ $ ]
@@ -75,7 +75,7 @@ Basic Movement
     Jump forward word-wise                  [ w ]
     Jump backward word-wise                 [ b ]
 
-    Start typing at end of line             [ shift a ]
+    Start typing at end of line             [ Shift a ]
 
 -------------------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ Basic Edits
     Cut                                     [ x ]
     Delete line                             [ dd ]
     Undo last edit                          [ u ]
-    Re-do last edit                         [ ctrl r ]
+    Re-do last edit                         [ Ctrl r ]
 
 -------------------------------------------------------------------------------
 
@@ -97,18 +97,18 @@ Visual Edits
         after entering visual mode
 
 
-    Uppercase character                     [ ctrl v , U ]
-    Lowercase character                     [ ctrl v , u ]
+    Uppercase character                     [ Ctrl v , U ]
+    Lowercase character                     [ Ctrl v , u ]
 
-    Uppercase line                          [ shift v , U ]
-    Lowercase line                          [ shift v , u ]
+    Uppercase line                          [ Shift v , U ]
+    Lowercase line                          [ Shift v , u ]
 
-    Insert before selection                 [ ctrl v , shift i , <input> , esc ]
+    Insert before selection                 [ Ctrl v , shift i , <input> , esc ]
 
-    Delete selection                        [ctrl or shift , v , d ]
+    Delete selection                        [ Ctrl or Shift , v , d ]
 
-    Bump line up                            [ shift v , K ]
-    Bump line down                          [ shift v , J ]
+    Bump line up                            [ Shift v , K ]
+    Bump line down                          [ Shift v , J ]
 
 -------------------------------------------------------------------------------
 
@@ -119,10 +119,10 @@ Searching Within File
         "instance x out of y total"
 
 
-    Start search                            [ /query , enter ]
+    Start search                            [ /query , Enter ]
     Go to next match                        [ n ]
     Go to previous match                    [ N ]
-    Stop search highlighting                [ esc ]
+    Stop search highlighting                [ Esc ]
 
 -------------------------------------------------------------------------------
 
@@ -149,8 +149,8 @@ Basic Combinations
 Other Custom Keymaps
 
     Escape insert mode                      [ jj ]
-    Paste without overwriting yank          [ space , p ]
-    Trim trailing whitespace                [ space , t ]
+    Paste without overwriting yank          [ Space , p ]
+    Trim trailing whitespace                [ Space , t ]
     (normal or visual)
 
 -------------------------------------------------------------------------------
@@ -206,6 +206,7 @@ Plugin: markdown-preview
         Opens a live preview of the markdown file in your browser.
 
     Toggle markdown preview                 [ Ctrl m ]
+    Compile PDF from .md                    [ Space , mp ]
 
 -------------------------------------------------------------------------------
 
