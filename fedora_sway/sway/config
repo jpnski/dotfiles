@@ -114,7 +114,7 @@ exec swayidle -w \
     bindsym $mod+Shift+f floating toggle
 
     bindsym $mod+space focus mode_toggle
-    bindsym $mod+a focus parent
+    bindsym $mod+a exec wtype -M ctrl -k b
 
 # Scratchpad:
 
