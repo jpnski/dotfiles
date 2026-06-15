@@ -1,0 +1,104 @@
+[global]
+    # Size
+    origin = top-right
+    offset = (14, 14)
+    scale = 0
+    width = 300
+    height = (0, 300)
+
+    # Border/Corners/Separator
+    frame_width = 2
+    frame_color = "#4C566A"
+    corners = all
+    corner_radius = 6
+    separator_height = 2
+    separator_color = frame
+
+    # Padding
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 0
+
+    # Icons
+    icon_theme = Adwaita
+    icon_position = left
+    icon_corner_radius = 0
+    icon_corners = all
+    min_icon_size = 32
+    max_icon_size = 32
+    enable_recursive_icon_lookup = true
+
+    # Text
+    font = Adwaita Sans 10.5
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    ellipsize = middle
+    line_height = 0
+    markup = full
+    ignore_newline = no
+    enable_posix_regex = false
+    show_indicators = yes
+
+    # Progress Bar
+    progress_bar = true
+    highlight = "#4C566A"
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 220
+    progress_bar_corner_radius = 3
+    progress_bar_corners = all
+
+    # Mouse
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+    # Behavior
+    notification_limit = 20
+    indicate_hidden = yes
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_age_threshold = 60
+    history_length = 20
+    sort = yes
+    gap_size = 0
+    monitor = 0
+    follow = none
+
+    # Misc.
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    sticky_history = yes
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    ignore_dbusclose = false
+    force_xwayland = false
+    force_xinerama = false
+
+[experimental]
+    per_monitor_dpi = false
+    pause_on_mouse_over = false
+    enable_pcre_regex = false
+
+[urgency_low]
+    background = "#242933"
+    foreground = "#D8DEE9"
+    timeout = 10
+    default_icon = dialog-information
+
+[urgency_normal]
+    background = "#81A1C17F"
+    foreground = "#D8DEE9"
+    timeout = 10
+    override_pause_level = 30
+    default_icon = dialog-information
+
+[urgency_critical]
+    background = "#BF616A7F"
+    foreground = "#D8DEE9"
+    frame_color = "#4C566A"
+    timeout = 0
+    override_pause_level = 60
+    default_icon = dialog-warning
